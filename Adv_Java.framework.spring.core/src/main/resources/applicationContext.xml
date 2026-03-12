@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- Project Bean -->
+	<bean id="project1"
+		class="com.capgemini.software_development_testing.Adv_Java.framework.spring.core.entity.Project">
+
+		<constructor-arg index="0" value="1" />
+		<constructor-arg index="1" value="Earthquake Prediction Model" />
+		<constructor-arg index="2" value="ML Based" />
+
+	</bean>
+
+	<!-- Student Bean -->
+	<bean id="student"
+		class="com.capgemini.software_development_testing.Adv_Java.framework.spring.core.entity.Student">
+
+		<property name="id" value="1" />
+		<property name="name" value="srishti" />
+		<property name="email" value="srishti@gmail.com" />
+		<property name="phnNo" value="17539569" />
+		<property name="project" ref="project1" />
+
+	</bean>
+
+</beans>
